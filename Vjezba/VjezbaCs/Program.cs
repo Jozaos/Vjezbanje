@@ -1,3 +1,3 @@
 ﻿using VjezbaCs;
-CiklicnaMatrica.Izvedi();
+Ciklicna.Izvedi();
 //Vjezba01.Izvedi();
