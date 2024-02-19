@@ -23,6 +23,13 @@ namespace VjezbaCs
 
             while (a <= red * stupac)
             {
+                for(int i=KrajStupac;i>=PocetakStupac;i--)
+                    matrica[KrajRed,i] = a++;
+                KrajRed--;
+                for(int i=KrajRed;i>=PocetakRed;i--)
+                    matrica[i, PocetakStupac] = a++;
+                PocetakStupac++;
+
                 for (int i = PocetakStupac; i<= KrajStupac; i++)
                     matrica[PocetakRed, i] = a++;
                 PocetakRed++;
@@ -32,15 +39,6 @@ namespace VjezbaCs
                     matrica[i,KrajStupac] = a++;
                 KrajStupac--;
 
-                for(int i=KrajStupac;i>=PocetakStupac;i--)
-                    matrica[KrajRed,i] = a++;
-                KrajRed--;
-
-                
-                
-                for(int i=KrajRed;i>=PocetakRed;i--)
-                    matrica[i, PocetakStupac] = a++;
-                PocetakStupac++;
             }
 
             for(int i=0; i<red; i++)
