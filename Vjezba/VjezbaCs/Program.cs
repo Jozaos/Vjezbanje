@@ -1,5 +1,5 @@
 ﻿using VjezbaCs;
 
-LjubavniKalk.Izvedi();
-//Ciklicna.Izvedi();
+//LjubavniKalk.Izvedi();
+Ciklicna.Izvedi();
 //Vjezba01.Izvedi();
