@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konzolna", "Konzolna.csproj", "{1035B178-07A0-4E9E-8F05-B5B46041C400}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konzolna", "Konzolna.csproj", "{C58BBFBD-5C27-4DAF-B664-34E4A18FE337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1035B178-07A0-4E9E-8F05-B5B46041C400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1035B178-07A0-4E9E-8F05-B5B46041C400}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1035B178-07A0-4E9E-8F05-B5B46041C400}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1035B178-07A0-4E9E-8F05-B5B46041C400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58BBFBD-5C27-4DAF-B664-34E4A18FE337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58BBFBD-5C27-4DAF-B664-34E4A18FE337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58BBFBD-5C27-4DAF-B664-34E4A18FE337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58BBFBD-5C27-4DAF-B664-34E4A18FE337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5F5A4CC5-5C7A-4283-BD18-C905F3476447}
+		SolutionGuid = {4566A164-9510-47AD-A994-063CACDBA0A6}
 	EndGlobalSection
 EndGlobal

@@ -1,1 +1,1 @@
-﻿new Konzolna.Konzolna.Izbornik();
+﻿new Konzolna.Main();
