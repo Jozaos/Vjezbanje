@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Konzolna
+namespace Konzolna.Model
 {
-    internal class Racun
+    internal class Racun: SamoSifra
     {
         public string? KorisnickoIme { get; set; }
         public string? Ime { get; set; }
         public string? Prezime { get; set; }
         public int? BrOsobne { get; set; }
-        public double? Stanje { get; set; }
+        public decimal? Stanje { get; set; }
 
         public override string ToString()
         {
@@ -26,7 +26,7 @@ namespace Konzolna
             sb.Append(BrOsobne);
             sb.Append(") (");
             sb.Append(Stanje);
-            
+
             return sb.Append("eur)").ToString();
         }
     }

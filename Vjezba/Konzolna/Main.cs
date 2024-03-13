@@ -9,19 +9,17 @@ namespace Konzolna
 {
     internal class Main
     {
-        private List<Racun> Racuni;
+        private ObradaRacun ObradaRacun;
+        
         public Main()
         {
-            Racuni = new List<Racun>();
-            TestPodaci();
+            ObradaRacun = new ObradaRacun(this);
+            
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
 
-        private void TestPodaci()
-        {
-            Racuni.Add(new() { KorisnickoIme = "josip031", Ime = "Josip", Prezime = "Rebolj", BrOsobne = 1234567, Stanje = 135.39 });
-        }
+        
 
         private void PozdravnaPoruka()
         {
@@ -46,11 +44,10 @@ namespace Konzolna
             switch(Pomocno.UcitajCijeliBroj("Odaberi gdje želiš ići (1-4) "))
             {
                 case 1:
-                    PrikaziRacune(true);
+                    ObradaRacun.PrikaziIzbornik();
                     break;
                 case 2:
-                    PrikaziPrihode();
-                    UnosRacuna();//PRVO POKAZAT GLAVNI IZBORNIK, ONDA UNOS
+                    
                     break;
                 case 3:
                     break;
@@ -65,65 +62,5 @@ namespace Konzolna
             PrikaziIzbornik();
         }
 
-        private void PrikaziPrihode()
-        {
-            //prihodi za svaki racun zadnjih par transakcija
-        }
-
-        private void UnosRacuna()
-        {
-            Racuni.Add(new()
-            {
-                KorisnickoIme = Pomocno.UcitajString("Unesi korisnicko ime: "),
-                Ime=Pomocno.UcitajString("Unesi ime vlasnika racuna: "),
-                Prezime=Pomocno.UcitajString("Unesi prezime vlasnika racuna: "),
-                BrOsobne=Pomocno.UcitajCijeliBroj("Unesi broj osobne vlasnika racuna: "),
-                Stanje=Pomocno.UcitajDecimalniBroj("Unesi stanje racuna: ")
-            });
-                
-            
-
-        }
-        
-
-        private void PrikaziRacune(bool PrikaziNaslov=false)
-        {
-            if (PrikaziNaslov)
-            {
-                Console.WriteLine("**********************");
-                Console.WriteLine("** Računi u sustavu** ");
-                Console.WriteLine("**********************");
-            }
-            if (Racuni.Count == 0)
-            {
-                Console.WriteLine("Nema računa u sustavu");
-                return;
-            }
-            int i = 1;
-            foreach(var o in Racuni)
-            {
-                Console.WriteLine(i++ +". "+o);
-            }
-            Console.WriteLine("**********************");
-            Console.WriteLine("1. Povratak na izbornik");
-            Console.WriteLine("2. Unos novog racuna");
-            Console.WriteLine("3. Zatvori program");
-            switch (Pomocno.UcitajCijeliBroj("Odaberi gdje želiš ići (1-3) "))
-            {
-                case 1:
-                    PrikaziIzbornik();
-                    break;
-                case 2:
-                    UnosRacuna();
-                    break;
-                case 3:
-                    Console.WriteLine("Povratak na glavni izbornik");
-                    return;
-                default:
-                    Console.WriteLine("Nisi odabrao dozvoljenu opciju");
-                    Console.WriteLine("**********************");
-                    break;
-            }
-        }
     }
 }
