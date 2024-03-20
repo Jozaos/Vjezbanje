@@ -86,7 +86,21 @@ namespace Konzolna
             int index = Pomocno.ucitajBrojRaspon("Odaberi redni broj racuna: ", "Nije dobar odabir", 1, Racuni.Count());
             var p = Racuni[index - 1];
             p.Sifra = Pomocno.ucitajCijeliBroj("Unesite sifru racuna(" + p.Sifra + "): ", "Unos mora biti pozitivni cijeli broj");
+            p.KorisnickoIme = Pomocno.UcitajString("Unesite korisnicko ime (" + p.KorisnickoIme + ")");
+            p.Ime = Pomocno.UcitajString("Unesi ime (" + p.Ime + ")");
+            p.Prezime = Pomocno.UcitajString("Unesi prezime (" + p.Prezime + ")");
+            p.BrOsobne = Pomocno.UcitajCijeliBroj("Unesi broj osobne (" + p.BrOsobne + ")");
+            p.Stanje = Pomocno.UcitajDecimalniBroj("Unesi stanje racuna (" + p.Stanje + ")");
 
+            Console.WriteLine("#####################");
+            Console.WriteLine("#### R A C U N I ####");
+            Console.WriteLine("#####################");
+            int b = 1;
+            foreach(Racun racun in Racuni)
+            {
+                Console.WriteLine("{0}. {1}",b++,racun);
+            }
+            Console.WriteLine("#####################");
 
 
         }
@@ -99,7 +113,7 @@ namespace Konzolna
             int b = 1;
             foreach(Racun racun in Racuni)
             {
-                Console.WriteLine("{0}. {1} ({2}) ({3}) ({4})",b++,racun.KorisnickoIme, racun.Ime, racun.Prezime, racun.Stanje);
+                Console.WriteLine("{0}. {1} ({2}) ({3}) ({4}) ({5})",b++,racun.KorisnickoIme, racun.Ime, racun.Prezime, racun.BrOsobne ,racun.Stanje+"eur");
             }
         }
 
